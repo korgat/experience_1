@@ -9,7 +9,7 @@ export default function buildWebpackConfiguration(
   buildOptions: IBuildOptions,
 ): webpack.Configuration {
   const { paths, mode, port, isDev } = buildOptions;
-  const fff: webpack.Configuration = {};
+
   return {
     mode,
     entry: paths.entry,
@@ -22,7 +22,7 @@ export default function buildWebpackConfiguration(
     module: {
       rules: buildWebpackLoader(buildOptions),
     },
-    resolve: buildWebpackResolvers(),
+    resolve: buildWebpackResolvers(buildOptions),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildWebpackDevServer(buildOptions) : undefined,
   };

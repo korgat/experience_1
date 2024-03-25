@@ -1,5 +1,5 @@
-import { ThemeContext, EThems, LOCAL_STORAGE_THEME_KEY } from './themeContext';
 import { useContext } from 'react';
+import { ThemeContext, EThems, LOCAL_STORAGE_THEME_KEY } from './themeContext';
 
 export const useTheme = () => {
   const { theme, setTheme } = useContext(ThemeContext);
