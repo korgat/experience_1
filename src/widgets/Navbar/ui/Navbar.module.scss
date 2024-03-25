@@ -1,9 +1,14 @@
 .navbar {
   background: var(--inverted-bg-color);
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 0 30px;
   height: var(--navbar-height);
+}
+
+.linkContainer {
+  display: flex;
+  gap: 20px;
 }
