@@ -7,6 +7,7 @@ import { AboutPage } from '@/pages/AboutPage';
 import './styles/index.scss';
 import { AppRouter } from '@/app/providers/router';
 import Navbar from '@/widgets/Navbar/ui/Navbar';
+import SideBar from '@/widgets/SideBar/ui/SideBar';
 
 const App = () => {
   const { theme } = useTheme();
@@ -14,7 +15,10 @@ const App = () => {
   return (
     <div className={`app ${theme}`}>
       <Navbar />
-      <AppRouter />
+      <div className="page">
+        <SideBar />
+        <AppRouter />
+      </div>
     </div>
   );
 };

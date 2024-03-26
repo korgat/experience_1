@@ -10,7 +10,6 @@ const Navbar = (props: NavbarProps) => {
   const { className = '', ...rest } = props;
   return (
     <div {...rest} className={classNames(cls.navbar, {}, [className])}>
-      <ThemeSwitcher />
       <div className={cls.linkContainer}>
         <AppLink theme={ELinkTheme.SECONDARY} to="/">
           Main

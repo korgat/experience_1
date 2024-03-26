@@ -9,7 +9,11 @@ const AppRouter = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         {routeConfig.map((config) => (
-          <Route key={config.path} path={config.path} element={config.element} />
+          <Route
+            key={config.path}
+            path={config.path}
+            element={<div className="page-content">{config.element}</div>}
+          />
         ))}
       </Routes>
     </Suspense>
