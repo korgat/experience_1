@@ -1,7 +1,9 @@
 import { classNames } from '@/shared/lib/classNames';
 import { Button } from '@/shared/ui/Button';
+import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
 import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import cls from './SideBar.module.scss';
 
 interface SideBarProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -9,6 +11,7 @@ interface SideBarProps extends React.HTMLAttributes<HTMLDivElement> {}
 const SideBar = (props: SideBarProps) => {
   const { className = '', ...rest } = props;
   const [collapsed, setCollapsed] = useState(false);
+  const { t } = useTranslation();
 
   const toggleHandler = () => {
     setCollapsed((prev) => !prev);
@@ -18,9 +21,10 @@ const SideBar = (props: SideBarProps) => {
       <Button style={{ alignSelf: 'center' }} onClick={toggleHandler}>
         Toggle
       </Button>
-      <div className={cls.content}>Some content</div>
+      <div className={cls.content}>{t('SideBar content')}</div>
       <div className={cls.switchers}>
         <ThemeSwitcher />
+        <LanguageSwitcher />
       </div>
     </div>
   );

@@ -8,10 +8,10 @@ import './styles/index.scss';
 import { AppRouter } from '@/app/providers/router';
 import Navbar from '@/widgets/Navbar/ui/Navbar';
 import SideBar from '@/widgets/SideBar/ui/SideBar';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
   const { theme } = useTheme();
-
   return (
     <div className={`app ${theme}`}>
       <Navbar />
