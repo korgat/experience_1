@@ -1,7 +1,5 @@
 import { classNames } from '@/shared/lib/classNames';
 import AppLink, { ELinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher';
-import { Link } from 'react-router-dom';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps extends React.HTMLProps<HTMLDivElement> {}

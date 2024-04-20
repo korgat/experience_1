@@ -1,9 +1,7 @@
-import { Link, To } from 'react-router-dom';
-import { LinkProps } from 'react-router-dom';
+import { Link, type To } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames';
 import cls from './AppLink.module.scss';
-import { FC } from 'react';
-import { TRoutePaths } from '@/shared/config/routeConfig/routeConfig';
+import { type TRoutePaths } from '@/shared/config/routeConfig/routeConfig';
 
 export enum ELinkTheme {
   PRIMARY = 'primary',

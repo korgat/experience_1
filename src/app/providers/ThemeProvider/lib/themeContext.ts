@@ -1,13 +1,13 @@
-import { createContext, Dispatch, SetStateAction } from 'react';
+import { createContext, type Dispatch, type SetStateAction } from 'react';
 
-export enum EThems {
+export enum Themes {
   LIGHT = 'light',
   DARK = 'dark',
 }
 
 interface ThemeContextProps {
-  theme?: EThems;
-  setTheme?: Dispatch<SetStateAction<EThems>>;
+  theme?: Themes;
+  setTheme?: Dispatch<SetStateAction<Themes>>;
 }
 
 export const LOCAL_STORAGE_THEME_KEY = 'them';

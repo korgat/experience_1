@@ -16,6 +16,7 @@ const SideBar = (props: SideBarProps) => {
   const toggleHandler = () => {
     setCollapsed((prev) => !prev);
   };
+  
   return (
     <div {...rest} className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}>
       <Button style={{ alignSelf: 'center' }} onClick={toggleHandler}>

@@ -1,8 +1,8 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import webpack from 'webpack';
-import { IBuildOptions } from './types/config';
+import type webpack from 'webpack';
+import { type BuildOptions } from './types/config';
 
-export function buildWebpackLoader(buildOptions: IBuildOptions): webpack.RuleSetRule[] {
+export function buildWebpackLoader(buildOptions: BuildOptions): webpack.RuleSetRule[] {
   const svgLoader = {
     test: /\.svg$/,
     use: ['@svgr/webpack'],

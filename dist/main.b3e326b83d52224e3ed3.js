@@ -3258,7 +3258,7 @@ var setInnerHTML = createMicrosoftUnsafeLocalFunction(function (node, html) {
       // new markup in a temp node and then move the child nodes across into
       // the target node
       reusableSVGContainer = reusableSVGContainer || document.createElement('div');
-      reusableSVGContainer.innerHTML = '<svg>' + html.valueOf().toString() + '</svg>';
+      reusableSVGContainer.innerHTML = '<svg>' + html.ValueOf().toString() + '</svg>';
       var svgNode = reusableSVGContainer.firstChild;
 
       while (node.firstChild) {
@@ -11600,7 +11600,7 @@ function makeClientIdInDEV(warnOnAccessInDEV) {
       warnOnAccessInDEV();
       return id;
     },
-    valueOf: function () {
+    ValueOf: function () {
       warnOnAccessInDEV();
       return id;
     }
@@ -11613,7 +11613,7 @@ function makeOpaqueHydratingObject(attemptToReadValue) {
   return {
     $$typeof: REACT_OPAQUE_ID_TYPE,
     toString: attemptToReadValue,
-    valueOf: attemptToReadValue
+    ValueOf: attemptToReadValue
   };
 }
 function preparePortalMount(portalInstance) {

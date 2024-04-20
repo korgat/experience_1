@@ -3,7 +3,7 @@ import { classNames } from '@/shared/lib/classNames';
 import cls from './ThemeSwitcher.module.scss';
 import ThemeDark from '@/shared/assets/icons/theme-dark.svg';
 import ThemeLight from '@/shared/assets/icons/theme-light.svg';
-import { EThems } from '@/app/providers/ThemeProvider/lib/themeContext';
+import { Themes } from '@/app/providers/ThemeProvider/lib/themeContext';
 import { Button } from '@/shared/ui/Button';
 import { EButtonTheme } from '@/shared/ui/Button/ui/Button';
 
@@ -18,7 +18,7 @@ const ThemeSwitcher = (props: ThemeSwitcherProps) => {
       theme={EButtonTheme.CLEAR}
       className={classNames(cls.themeSwitcher, {}, [className])}
       onClick={toggle}>
-      {theme === EThems.DARK ? <ThemeDark fill="red" /> : <ThemeLight />}
+      {theme === Themes.DARK ? <ThemeDark fill="red" /> : <ThemeLight />}
     </Button>
   );
 };

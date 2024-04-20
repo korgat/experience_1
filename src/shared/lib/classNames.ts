@@ -9,6 +9,7 @@ export const classNames = (
         if (value) {
           acc.push(key);
         }
+		
         return acc;
       },
       [mainClass],
