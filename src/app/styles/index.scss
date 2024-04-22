@@ -4,18 +4,20 @@
 @import 'themes/light';
 
 .app {
-  font: var(--font-md);
-
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-
-  min-height: 100vh;
+	font: var(--font-md);
+	background-color: var(--bg-color);
+	color: var(--primary-color);
+	min-height: 100vh;
 }
 
 .page {
-  display: flex;
+	display: flex;
 }
 
 .page-content {
-  flex-grow: 1;
+	flex-grow: 1;
+}
+
+.test {
+	padding-left: 10px;
 }
