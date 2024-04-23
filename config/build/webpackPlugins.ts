@@ -4,15 +4,15 @@ import webpack from 'webpack';
 import type { BuildOptions } from './types/config';
 
 export function buildWebpackPlugins({
-  paths,
-  isDev,
+    paths,
+    isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
-    new HtmlWebpackPlugin({ template: paths.html }),
-    new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({
-      filename: isDev ? 'css/[name].css' : 'css/[name].[contenthash:8].css',
-      chunkFilename: isDev ? 'css/[name].css' : 'css/[name].[contenthash:8].css',
-    }),
-  ];
+    return [
+        new HtmlWebpackPlugin({ template: paths.html }),
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({
+            filename: isDev ? 'css/[name].css' : 'css/[name].[contenthash:8].css',
+            chunkFilename: isDev ? 'css/[name].css' : 'css/[name].[contenthash:8].css',
+        }),
+    ];
 }

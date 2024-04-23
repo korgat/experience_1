@@ -1,21 +1,19 @@
-import { routeConfig } from '@/shared/config/routeConfig/routeConfig';
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { routeConfig } from '@/shared/config/routeConfig/routeConfig';
 
-const AppRouter = () => {
-  return (
+const AppRouter = () => (
     <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        {routeConfig.map((config) => (
-          <Route
-            key={config.path}
-            path={config.path}
-            element={<div className="page-content">{config.element}</div>}
-          />
-        ))}
-      </Routes>
+        <Routes>
+            {routeConfig.map((config) => (
+                <Route
+                    key={config.path}
+                    path={config.path}
+                    element={<div className="page-content">{config.element}</div>}
+                />
+            ))}
+        </Routes>
     </Suspense>
-  );
-};
+);
 
 export default AppRouter;

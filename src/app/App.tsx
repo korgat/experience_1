@@ -5,16 +5,16 @@ import Navbar from '@/widgets/Navbar/ui/Navbar';
 import SideBar from '@/widgets/SideBar/ui/SideBar';
 
 const App = () => {
-  const { theme } = useTheme();
-  return (
-    <div className={`app ${theme}`}>
-      <Navbar />
-      <div className="page">
-        <SideBar />
-        <AppRouter />
-      </div>
-    </div>
-  );
+    const { theme } = useTheme();
+    return (
+        <div className={`app ${theme}`}>
+            <Navbar />
+            <div className="page">
+                <SideBar />
+                <AppRouter />
+            </div>
+        </div>
+    );
 };
 
 export default App;

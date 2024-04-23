@@ -1,4 +1,7 @@
 {
-  "Welcome to React": "Welcome to React and react-i18next",
-  "SideBar content": "SideBar text content"
+	"Welcome to React": "Welcome to React and react-i18next",
+	"SideBar content": "SideBar text content",
+	"toggle": "Show/Hide",
+	"main-route-link": "Main",
+	"about-route-link": "About us"
 }

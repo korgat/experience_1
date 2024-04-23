@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkexperience_1=self.webpackChunkexperience_1||[]).push([[297],{297:(e,n,t)=>{t.r(n),t.d(n,{default:()=>u});var c=t(848),r=t(389);const u=function(){var e=(0,r.Bd)("aboutPage").t;return(0,c.jsx)("div",{children:e("About content")})}}}]);

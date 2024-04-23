@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkexperience_1=self.webpackChunkexperience_1||[]).push([[617],{617:(e,n,t)=>{t.r(n),t.d(n,{default:()=>a});var c=t(848),r=t(389);const a=function(){var e=(0,r.Bd)("mainPage").t;return(0,c.jsxs)("div",{children:[e("Main content"),e("another-content")]})}}}]);

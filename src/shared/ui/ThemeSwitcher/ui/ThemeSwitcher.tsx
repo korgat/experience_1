@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTheme } from '@/app/providers/ThemeProvider';
 import { classNames } from '@/shared/lib/classNames';
 import cls from './ThemeSwitcher.module.scss';
@@ -10,17 +11,18 @@ import { EButtonTheme } from '@/shared/ui/Button/ui/Button';
 interface ThemeSwitcherProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const ThemeSwitcher = (props: ThemeSwitcherProps) => {
-  const { theme, toggle } = useTheme();
-  const { className = '', ...rest } = props;
-  return (
-    <Button
-      {...rest}
-      theme={EButtonTheme.CLEAR}
-      className={classNames(cls.themeSwitcher, {}, [className])}
-      onClick={toggle}>
-      {theme === Themes.DARK ? <ThemeDark fill="red" /> : <ThemeLight />}
-    </Button>
-  );
+    const { theme, toggle } = useTheme();
+    const { className = '', ...rest } = props;
+    return (
+        <Button
+            {...rest}
+            theme={EButtonTheme.CLEAR}
+            className={classNames(cls.themeSwitcher, {}, [className])}
+            onClick={toggle}
+        >
+            {theme === Themes.DARK ? <ThemeDark fill="red" /> : <ThemeLight />}
+        </Button>
+    );
 };
 
 export default ThemeSwitcher;

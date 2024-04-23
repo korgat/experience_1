@@ -1,4 +1,7 @@
 {
-  "Welcome to React": "Привіт Реакт",
-  "SideBar content": "Контент у сайдбарі"
+	"Welcome to React": "Привіт Реакт",
+	"SideBar content": "Контент у сайдбарі",
+	"toggle": "Показати/Заховати",
+	"main-route-link": "Головна",
+	"about-route-link": "Про нас"
 }
