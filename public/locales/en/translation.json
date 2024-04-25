@@ -4,5 +4,7 @@
 	"toggle": "Show/Hide",
 	"main-route-link": "Main",
 	"about-route-link": "About us",
-	"page-not-found": "Page not found"
+	"page-not-found": "Page not found",
+	"error-page-text": "Something went wrong  try to reload",
+	"reload-btn": "Reload"
 }
