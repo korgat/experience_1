@@ -3,5 +3,6 @@
 	"SideBar content": "SideBar text content",
 	"toggle": "Show/Hide",
 	"main-route-link": "Main",
-	"about-route-link": "About us"
+	"about-route-link": "About us",
+	"page-not-found": "Page not found"
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AppLink, { ELinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { AppLink, ELinkTheme } from '@/shared/ui/AppLink';
+
 import { classNames } from '@/shared/lib/classNames';
 import cls from './Navbar.module.scss';
 

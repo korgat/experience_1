@@ -3,5 +3,6 @@
 	"SideBar content": "Контент у сайдбарі",
 	"toggle": "Показати/Заховати",
 	"main-route-link": "Головна",
-	"about-route-link": "Про нас"
+	"about-route-link": "Про нас",
+	"page-not-found": "Сторінку не знайдено"
 }
