@@ -4,6 +4,7 @@
  */
 
 import type { Config } from 'jest';
+import path from 'path';
 
 const config: Config = {
     // All imported modules in your tests should be mocked automatically
@@ -26,9 +27,7 @@ const config: Config = {
         '\\\\node_modules\\\\',
     ],
     // An array of directory names to be searched recursively up from the requiring module's location
-    moduleDirectories: [
-        'node_modules',
-    ],
+    moduleDirectories: ['node_modules'],
     // An array of file extensions your modules use
     moduleFileExtensions: [
         'js',
@@ -46,6 +45,12 @@ const config: Config = {
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+    moduleNameMapper: {
+        '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestMockComponent.tsx'),
+        '@/(.*)': '<rootDir>/src/$1',
+    },
+    setupFilesAfterEnv: ['<rootDir>/config/jest/jestSetup.ts'],
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,

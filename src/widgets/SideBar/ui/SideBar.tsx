@@ -19,6 +19,7 @@ const SideBar = (props: SideBarProps) => {
 
     return (
         <div
+            data-testid="sidebar"
             {...rest}
             className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}
         >
