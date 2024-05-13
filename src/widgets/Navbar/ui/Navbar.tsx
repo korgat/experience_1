@@ -1,28 +1,25 @@
-import React from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
-import { AppLink, ELinkTheme } from '@/shared/ui/AppLink';
-
-import { classNames } from '@/shared/lib/classNames';
 import cls from './Navbar.module.scss';
 
-interface NavbarProps extends React.HTMLProps<HTMLDivElement> {}
+interface NavbarProps {
+    className?: string;
+}
 
-const Navbar = (props: NavbarProps) => {
-    const { className = '', ...rest } = props;
+export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
+
     return (
-        <div
-            {...rest}
-            className={classNames(cls.navbar, {}, [className])}
-        >
-            <div className={cls.linkContainer}>
-                <AppLink theme={ELinkTheme.SECONDARY} to="/">
-                    {t('main-route-link')}
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.links}>
+                <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
+                    {t('Главная')}
                 </AppLink>
-                <AppLink to="/about">{t('about-route-link')}</AppLink>
+                <AppLink theme={AppLinkTheme.RED} to="/about">
+                    {t('О сайте')}
+                </AppLink>
             </div>
         </div>
     );
 };
-
-export default Navbar;

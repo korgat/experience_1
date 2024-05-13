@@ -1,10 +1,13 @@
 {
-	"Welcome to React": "Welcome to React and react-i18next",
-	"SideBar content": "SideBar text content",
-	"toggle": "Show/Hide",
-	"main-route-link": "Main",
-	"about-route-link": "About us",
-	"page-not-found": "Page not found",
-	"error-page-text": "Something went wrong  try to reload",
-	"reload-btn": "Reload"
+  "Тестовый пример": "Test example",
+  "Перевод": "Translate",
+  "Главная страница": "Main page",
+  "Язык": "English",
+  "новый перевод": "новый перевод",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Обновить страницу": "Reload page",
+  "throw error": "throw error",
+  "Главная": "Main",
+  "О сайте": "About us"
 }

@@ -1,20 +1,32 @@
-import React from 'react';
-import { AboutPage } from '@/pages/AboutPage';
-import { MainPage } from '@/pages/MainPage';
-import { NotFoundPage } from '@/pages/NotFoundPage';
-import { type ValueOf } from '@/shared/types/types';
+import { RouteProps } from 'react-router-dom';
+import { MainPage } from 'pages/MainPage';
+import { AboutPage } from 'pages/AboutPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
-const routes = {
-    main: '/',
-    about: '/about',
-    notFound: '*',
-} as const;
+export enum AppRoutes {
+    MAIN = 'main',
+    ABOUT = 'about',
+    NOT_FOUND = 'not_found',
+}
 
-export type TRoutePaths = ValueOf<typeof routes>;
-export type TRouteNames = keyof typeof routes;
+export const RoutePath: Record<AppRoutes, string> = {
+    [AppRoutes.MAIN]: '/',
+    [AppRoutes.ABOUT]: '/about',
+    // последний
+    [AppRoutes.NOT_FOUND]: '*',
+};
 
-export const routeConfig: Array<{ path: TRoutePaths; element: React.ReactNode }> = [
-    { path: routes.main, element: <MainPage /> },
-    { path: routes.about, element: <AboutPage /> },
-    { path: routes.notFound, element: <NotFoundPage /> },
-];
+export const routeConfig: Record<AppRoutes, RouteProps> = {
+    [AppRoutes.MAIN]: {
+        path: RoutePath.main,
+        element: <MainPage />,
+    },
+    [AppRoutes.ABOUT]: {
+        path: RoutePath.about,
+        element: <AboutPage />,
+    },
+    [AppRoutes.NOT_FOUND]: {
+        path: RoutePath.not_found,
+        element: <NotFoundPage />,
+    },
+};
